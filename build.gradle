@@ -1,6 +1,7 @@
 buildscript {
     repositories {
-        jcenter()
+//        jcenter()
+        maven { url 'https://groovy.jfrog.io/artifactory/libs-release/' }
     }
     dependencies {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
@@ -51,7 +52,9 @@ jar {
 }
 
 repositories {
-    jcenter()
+//    jcenter()
+    mavenLocal()
+    maven { url 'https://groovy.jfrog.io/artifactory/libs-release/' }
 }
 
 configurations {
